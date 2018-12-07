@@ -1,0 +1,27 @@
+﻿@model List<WordCountWebApp.Models.WordModel>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<div class="col-lg-12">
+    <h2>Cümle Listesi</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Cümle</th>
+                <th>Sayısı</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.text</td>
+                    <td>@item.count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
